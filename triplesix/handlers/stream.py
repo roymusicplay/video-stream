@@ -39,7 +39,7 @@ def inline_keyboard2(query: str, user_id: int):
         yield InlineKeyboardButton(f"{i}", callback_data=f"stream {j}|{query}|{user_id}")
 
 
-@Client.on_message(command("stream"))
+@Client.on_message(command("vc"))
 async def start_stream(_, message: Message):
     query = " ".join(message.command[1:])
     reply = message.reply_to_message
@@ -47,14 +47,14 @@ async def start_stream(_, message: Message):
         await player.start_stream(query, message)
     elif reply:
         if reply.video or reply.document:
-            await message.reply("This feature is under development, contact @shohih_abdul2 for more information")
+            await message.reply("This feature is under development, contact @ABOUT_ABHINAS for more information")
         else:
             await message.reply("Reply to video or document.\nNote: This feature is under development")
     else:
         await message.reply("Pass the query after /stream command!")
 
 
-@Client.on_message(command("streamv2"))
+@Client.on_message(command("vp"))
 async def stream_v2(_, message: Message):
     query = " ".join(message.command[1:])
     user_id = message.from_user.id
