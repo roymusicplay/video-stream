@@ -23,7 +23,7 @@ async def start_(_, message: Message):
 				],
 				[
 					InlineKeyboardButton(
-						"Dev", url="https://t.me/shohih_abdul2"),
+						"Dev", url="https://t.me/abhinasroy"),
 				],
 				[
 					InlineKeyboardButton(
@@ -68,7 +68,7 @@ async def help_(_, message: Message):
 	2.) then promote me as admin and give all permissions except anonymous admin.
 	3.) add @{client_username} to your group.
 	4.) turn on the voice chat first before start to stream video.
-	5.) type /stream (reply to video/give yt url) to start streaming.
+	5.) type /vc (reply to video/give yt url) to start streaming.
 	6.) type /end to end the video streaming.
 	""",
 			reply_markup=InlineKeyboardMarkup(
